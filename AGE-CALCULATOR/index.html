@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-shape shape-1" aria-hidden="true"></div>
+  <div class="bg-shape shape-2" aria-hidden="true"></div>
+
+  <main class="card">
+    <h1>Age Calculator</h1>
+    <p class="subtitle">Enter your date of birth and get your exact age in years, months, and days.</p>
+
+    <form id="ageForm" novalidate>
+      <div class="fields">
+        <div class="field">
+          <label for="day">Day</label>
+          <input id="day" name="day" type="number" min="1" max="31" placeholder="DD" required />
+        </div>
+        <div class="field">
+          <label for="month">Month</label>
+          <input id="month" name="month" type="number" min="1" max="12" placeholder="MM" required />
+        </div>
+        <div class="field">
+          <label for="year">Year</label>
+          <input id="year" name="year" type="number" min="1900" max="9999" placeholder="YYYY" required />
+        </div>
+      </div>
+
+      <button type="submit">Calculate Age</button>
+      <p id="errorMessage" class="error" aria-live="polite"></p>
+    </form>
+
+    <section id="result" class="result" aria-live="polite">
+      <h2>Your Age</h2>
+      <div class="result-grid">
+        <div class="result-box"><span id="years">0</span><small>Years</small></div>
+        <div class="result-box"><span id="months">0</span><small>Months</small></div>
+        <div class="result-box"><span id="days">0</span><small>Days</small></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
